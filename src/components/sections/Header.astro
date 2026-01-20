@@ -1,102 +1,212 @@
 ---
+const menu = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "About",
+    link: "/about",
+  },
+  {
+    name: "Contact",
+    link: "/contact",
+  },
+];
 ---
+
 <div class="em40_header_area_main">
- 	<!-- HEADER TOP AREA -->
-    <div class="sheepfarm-header-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-lg-8 col-xl-8 col-md-8 col-sm-12">
-                    <div class="top-address">
-                        <p><span><i class="fas fa-envelope"></i>info@demo.com</span>
-                        <span> <i class="fas fa-phone-alt"></i>+998 965 242 52</span>
-                        <span> <i class="fas fa-map-marker-alt"></i>22/12  Av. Principal, Ciudad</span></p>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-lg-4 col-xl-4 col-md-4 col-sm-12">
-                    <div class="top-right-menu">
-                        <ul class="social-icons text-right">
-                            <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fa fa-x-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fab fa-tumblr"></i></a></li>
-                            <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+  <div class="sheepfarm-header-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-lg-7 col-xl-8 col-md-6 col-sm-12">
+          <div class="top-address text-left text_s_center">
+            <p>
+              <span> <i class="ti-location-pin"></i>Sheep Farming, 92 Broklyn Golden Street USA</span>
+              <a href="https://demo.themexbd.com/html/sheepfarm/#"> <i class="ti-email"></i>demo@example.com</a>
+            </p>
+          </div>
         </div>
-    </div>
-    <!-- END HEADER TOP AREA -->
-    <div class="sheepfarm-main-menu one_page hidden-xs hidden-sm">
-        <div id="sticky-header" class="sheepfarm_nav_area scroll_fixed postfix fixed top-[46px] w-full z-99999 transition-all duration-[50]! bg-white">
-            <div class="container">
-                <div class="row logo-left">
-                    <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
-                        <div class="logo">
-                            <a class="main_sticky_main_l" href="#" title="sheepfarm">
-                                <img src="/content/logo.png" alt="sheepfarm">
-                            </a>
-                            <a class="main_sticky_l" href="#" title="sheepfarm">
-                                <img src="/content/logo2.png" alt="sheepfarm">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-8">
-                        <div class="tx_mmenu_together">
-                            <nav class="sheepfarm_menu">
-                                <ul class="sub-menu">
-                                    <li><a href="#">Inicio</a></li>
-                                    <li><a href="#">Nosotros</a></li>
-                                    <li><a href="#">Servicios</a></li>
-                                    <li><a href="#">Páginas</a></li>
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Contacto</a></li>
-                                </ul>
-                            </nav>
-                            <div class="donate-btn-header">
-                                <a class="dtbtn" href="#">Cotizar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="col-xs-12 col-lg-5 col-xl-4 col-md-6 col-sm-12">
+          <div class="top-right-menu d-flex justify-content-end">
+            <ul class="social-icons text-right text_m_center">
+              <li><a class="facebook social-icon" href="https://demo.themexbd.com/html/sheepfarm/#"><i class="ti-facebook"></i></a></li>
+              <li><a class="twitter social-icon" href="https://demo.themexbd.com/html/sheepfarm/#"><i class="fa fa-x-twitter"></i></a></li>
+              <li><a class="instagram social-icon" href="https://demo.themexbd.com/html/sheepfarm/#"><i class="ti-instagram"></i></a></li>
+              <li><a class="pinterest social-icon" href="https://demo.themexbd.com/html/sheepfarm/#"><i class="ti-pinterest"></i></a></li>
+            </ul>
+          </div>
         </div>
+      </div>
     </div>
-    
-    <script>
-        const header = document.getElementById('sticky-header');
-        
-        if (header) {
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 10) {
-                    header.classList.add('top-0', '!shadow-md', '!py-2');
-                    header.classList.remove('!py-4');
-                } else {
-                    header.classList.remove( 'top-0', '!shadow-md', '!py-2');
-                    header.classList.add('!py-4');
+  </div>
+  <div class="sheepfarm-main-menu hidden-xs hidden-sm one_page witr_h_h19" style="z-index: 1000;">
+    <div class="sheepfarm_nav_area scroll_fixed">
+      <div class="container">
+        <div class="row logo-left bg_style">
+          <div class="col-md-2 col-sm-2 col-xs-2">
+            <div class="theme_cr_logo">
+              <div class="logo">
+                <a class="main_sticky_main_l" href="https://demo.themexbd.com/html/sheepfarm/index.html" title="consultionit">
+                  <img src="/content/logo1.png" alt="consultionit" />
+                </a>
+                <a class="main_sticky_l" href="https://demo.themexbd.com/html/sheepfarm/index.html" title="consultionit">
+                  <img src="/content/logo2.png" alt="consultionit" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- MAIN MENU -->
+          <div class="col-md-10 col-sm-10 col-xs-10 tx_menu_together">
+            <nav class="sheepfarm_menu">
+              <ul class="sub-menu">
+                {
+                  menu.map((item) => {
+                    return (
+                      <li>
+                        <a href={item.link}>{item.name}</a>
+                      </li>
+                    );
+                  })
                 }
-            });
-        }
-    </script>
-    <!-- MOBILE MENU -->
-    <div class="mobile-menu-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="mobile-menu">
-                        <nav id="dropdown">
-                            <ul class="sub-menu">
-                                <li><a href="#">Inicio</a></li>
-                                <li><a href="#">Nosotros</a></li>
-                                <li><a href="#">Servicios</a></li>
-                                <li><a href="#">Páginas</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Contacto</a></li>
-                            </ul>
-                        </nav>
+              </ul>
+            </nav>
+            <div class="tx_mmenu_together">
+              <div class="main-search-menu">
+                <div class="em-quearys-top msin-menu-search">
+                  <div class="em-top-quearys-area">
+                    <div class="em-header-quearys">
+                      <div class="em-quearys-menu">
+                        <i class="ti-search t-quearys"></i>
+                      </div>
                     </div>
+                    <!--SEARCH FORM-->
+                    <div class="em-quearys-inner">
+                      <div class="em-quearys-form">
+                        <form class="top-form-control" action="https://demo.themexbd.com/html/sheepfarm/#" method="get">
+                          <input type="text" placeholder="Type Your Keyword" name="s" value="" />
+                          <button class="top-quearys-style" type="submit">
+                            <i class="icofont-long-arrow-right"></i>
+                          </button>
+                        </form>
+                        <div class="em-header-quearys-close text-center mrt10">
+                          <div class="em-quearys-menu">
+                            <i class="icofont-close-line t-close em-s-hidden"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <!-- <div class="mini_shop_content site-header-cart" id="site-header-cart">
+                <div class="">
+                  <a class="cart-contents" href="https://demo.themexbd.com/html/sheepfarm/#" title="View your shopping cart"
+                    ><i class="ti-bag"></i>
+                    <span class="count">0</span>
+                  </a>
+                </div>
+                <div class="twr_mini_cart">
+                  <div class="widget woocommerce widget_shopping_cart">
+                    <div class="widget_shopping_cart_content">
+                      <p class="woocommerce-mini-cart__empty-message">No products in the cart.</p>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <div class="donate-btn-header">
+                <a class="dtbtn" href="https://demo.themexbd.com/html/sheepfarm/#">Get Free Quote</a>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
+  <div></div>
+</div>
+<!-- mobile menu -->
+<div class="mobile_logo_area">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="mobilemenu_con">
+          <div class="mobile_menu_logo text-center">
+            <a href="https://demo.themexbd.com/html/sheepfarm/index.html" title="sheepfarm">
+              <img src="/content/logo1.png" alt="sheepfarm" />
+            </a>
+          </div>
+          <div class="mobile_menu_option">
+            <div class="mobile_menu_o mobile_opicon">
+              <i class="icofont-navigation-menu openclass"></i>
+            </div>
+            <div class="mobile_menu_inner mobile_p">
+              <div class="mobile_menu_content">
+                <div class="mobile_menu_logo text-center">
+                  <a href="https://demo.themexbd.com/html/sheepfarm/index.html" title="sheepfarm">
+                    <img src="/content/logo1.png" alt="sheepfarm" />
+                  </a>
+                </div>
+                <div class="menu_area mobile-menu">
+                  <nav class="sheepfarm_menu" style="display: block;">
+                    <ul class="sub-menu">
+                      <li class="menu-item-has-children">
+                        <a href="https://demo.themexbd.com/html/sheepfarm/#">Home</a>
+                        <ul class="sub-menu">
+                          <li><a href="https://demo.themexbd.com/html/sheepfarm/index.html">Home Main</a></li>
+                          <li><a href="https://demo.themexbd.com/html/sheepfarm/landing.html">Home-Landing</a></li>
+                          <li><a href="https://demo.themexbd.com/html/sheepfarm/video.html">Home-Video</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="https://demo.themexbd.com/html/sheepfarm/about.html">About</a></li>
+                      <li class="menu-item-has-children">
+                        <a href="https://demo.themexbd.com/html/sheepfarm/#">Shop</a>
+                        <ul class="sub-menu">
+                          <li><a href="https://demo.themexbd.com/html/sheepfarm/shop.html">Shop</a></li>
+                          <li><a href="https://demo.themexbd.com/html/sheepfarm/cart.html">Cart</a></li>
+                          <li><a href="https://demo.themexbd.com/html/sheepfarm/checkout.html">Checkout</a></li>
+                          <li><a href="https://demo.themexbd.com/html/sheepfarm/my_account.html">My account</a></li>
+                        </ul>
+                      </li>
+                      <li class="menu-item-has-children">
+                        <a href="https://demo.themexbd.com/html/sheepfarm/#">Page</a>
+                        <ul class="sub-menu">
+                          <li><a href="https://demo.themexbd.com/html/sheepfarm/service.html">Service</a></li>
+                          <li class="menu-item-has-children">
+                            <a href="https://demo.themexbd.com/html/sheepfarm/#">Gallery</a>
+                            <ul class="sub-menu">
+                              <li><a href="https://demo.themexbd.com/html/sheepfarm/gallery_2column.html">Gallery-2column</a></li>
+                              <li><a href="https://demo.themexbd.com/html/sheepfarm/gallery_3column.html">Gallery-3column</a></li>
+                              <li><a href="https://demo.themexbd.com/html/sheepfarm/gallery_4column.html">Gallery-4column</a></li>
+                            </ul>
+                          </li>
+                          <li><a href="https://demo.themexbd.com/html/sheepfarm/team.html">Team</a></li>
+                          <li><a href="https://demo.themexbd.com/html/sheepfarm/testimonial.html">Testimonial</a></li>
+                          <li><a href="https://demo.themexbd.com/html/sheepfarm/pricing_table.html">Pricing Table</a></li>
+                          <li><a href="https://demo.themexbd.com/html/sheepfarm/faq_page.html">Faq Page</a></li>
+                        </ul>
+                      </li>
+                      <li class="menu-item-has-children">
+                        <a href="https://demo.themexbd.com/html/sheepfarm/#">Blog</a>
+                        <ul class="sub-menu">
+                          <li><a href="https://demo.themexbd.com/html/sheepfarm/blog.html">Blog Gird</a></li>
+                          <li><a href="https://demo.themexbd.com/html/sheepfarm/blog-left-sidebar.html">Blog Left Sidebar</a></li>
+                          <li><a href="https://demo.themexbd.com/html/sheepfarm/blog-right-sidebar.html">Blog Right Sidebar</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="https://demo.themexbd.com/html/sheepfarm/contact.html">Contact</a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="mobile_menu_o mobile_cicon">
+                  <i class="icofont-close closeclass"></i>
+                </div>
+              </div>
+            </div>
+            <div class="mobile_overlay"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
