@@ -28,7 +28,7 @@
     </div>
     <!-- END HEADER TOP AREA -->
     <div class="sheepfarm-main-menu one_page hidden-xs hidden-sm">
-        <div class="sheepfarm_nav_area scroll_fixed postfix">
+        <div id="sticky-header" class="sheepfarm_nav_area scroll_fixed postfix fixed top-[46px] w-full z-99999 transition-all duration-[50]! bg-white">
             <div class="container">
                 <div class="row logo-left">
                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4">
@@ -62,6 +62,22 @@
             </div>
         </div>
     </div>
+    
+    <script>
+        const header = document.getElementById('sticky-header');
+        
+        if (header) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('top-0', '!shadow-md', '!py-2');
+                    header.classList.remove('!py-4');
+                } else {
+                    header.classList.remove( 'top-0', '!shadow-md', '!py-2');
+                    header.classList.add('!py-4');
+                }
+            });
+        }
+    </script>
     <!-- MOBILE MENU -->
     <div class="mobile-menu-area">
         <div class="container">
