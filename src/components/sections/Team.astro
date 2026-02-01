@@ -1,4 +1,5 @@
 ---
+import { team } from "../../data/team";
 ---
 <div class="sm_team_area">
     <div class="container">
@@ -10,75 +11,33 @@
                             <img src="/content/Sm_title_shap.png"
                                  alt="image">
                         </div>
-                        <h2 class="txbdstitle hlight">Conoce a Nuestros Granjeros</h2>
-                        <p>¡Solo tenemos las ovejas más finas y amigables en nuestra granja! ¡Con nuestros granjeros
-                            calificados, su experiencia en la granja será excelente!</p>
+                        <h2 class="txbdstitle hlight">Nuestro Equipo de Expertos</h2>
+                        <p>Contamos con profesionales altamente capacitados en energías renovables e inteligencia artificial para brindarte el mejor asesoramiento y servicio técnico.</p>
                     </div>
                 </div>
             </div>
-            <!-- 1 single team -->
-            <div class="col-lg-4 col-md-6">
-                <div class="tteam11 alltmcst">
-                    <div class="tteamimg boxtextposire txbdboxallhover">
-                        <img src="/content/Sm_team1.jpg"
-                             alt="image">
-                        <div class="tteamcon text-center tteamp11 boxtextposi boxtextposbl alltmcstc">
-                            <div class="team_title">
-                                <h2 class="teamtit">Wendy Lannister </h2>
-                                <span>Equipo Dcfarm</span>
-                            </div>
-                            <div class="tteamsocial ticonp11">
-                                <a href="#"><i class="fa fa-facebook-f"></i></a>
-                                <a href="#"><i class="fa fa-x-twitter"></i></a>
-                                <a href="#"><i class="fab fa-tumblr"></i></a>
-                                <a href="#"><i class="fab fa-vimeo-v"></i></a>
+            {team.map((member) => (
+                <div class="col-lg-4 col-md-6">
+                    <div class="tteam11 alltmcst">
+                        <div class="tteamimg boxtextposire txbdboxallhover">
+                            <img src={member.image} alt="image">
+                            <div class="tteamcon text-center tteamp11 boxtextposi boxtextposbl alltmcstc">
+                                <div class="team_title">
+                                    <h2 class="teamtit">{member.name}</h2>
+                                    <span>{member.role}</span>
+                                </div>
+                                <div class="tteamsocial ticonp11">
+                                    {member.social.map((social) => (
+                                        <a href={social.link}><i class={social.icon}></i></a>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- 2 single team -->
-            <div class="col-lg-4 col-md-6">
-                <div class="tteam11 alltmcst">
-                    <div class="tteamimg boxtextposire txbdboxallhover">
-                        <img src="/content/Sm_team2.jpg"
-                             alt="image">
-                        <div class="tteamcon text-center tteamp11 boxtextposi boxtextposbl alltmcstc">
-                            <div class="team_title">
-                                <h2 class="teamtit">Smiley Martell </h2>
-                                <span>Granjero de Campo</span>
-                            </div>
-                            <div class="tteamsocial ticonp11">
-                                <a href="#"><i class="fa fa-facebook-f"></i></a>
-                                <a href="#"><i class="fa fa-x-twitter"></i></a>
-                                <a href="#"><i class="fab fa-tumblr"></i></a>
-                                <a href="#"><i class="fab fa-vimeo-v"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- 3 single team -->
-            <div class="col-lg-4 col-md-6">
-                <div class="tteam11 alltmcst">
-                    <div class="tteamimg boxtextposire txbdboxallhover">
-                        <img src="/content/Sm_team3.jpg"
-                             alt="image">
-                        <div class="tteamcon text-center tteamp11 boxtextposi boxtextposbl alltmcstc">
-                            <div class="team_title">
-                                <h2 class="teamtit">Honn michale </h2>
-                                <span>Granjero</span>
-                            </div>
-                            <div class="tteamsocial ticonp11">
-                                <a href="#"><i class="fa fa-facebook-f"></i></a>
-                                <a href="#"><i class="fa fa-x-twitter"></i></a>
-                                <a href="#"><i class="fab fa-tumblr"></i></a>
-                                <a href="#"><i class="fab fa-vimeo-v"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            ))}
         </div>
+    </div>
+</div>
     </div>
 </div>

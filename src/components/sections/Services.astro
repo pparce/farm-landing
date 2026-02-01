@@ -1,0 +1,44 @@
+---
+import { services } from "../../data/services";
+---
+<div class="sm_offer_area" id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-l2">
+                <div class="tts">
+                    <div class="ttin text-center">
+                        <div class="ttit flex justify-center items-center">
+                            <img src="/content/Sm_title_shap.png"
+                                 alt="image">
+                        </div>
+                        <h2 class="txbdstitle hlight">Servicios Especializados</h2>
+                        <p>Ofrecemos una amplia gama de soluciones tecnológicas integrales para optimizar la infraestructura de su campo.</p>
+                    </div>
+                </div>
+            </div>
+            {services.map((service) => (
+                <div class="col-lg-3 col-md-6">
+                    <div class="txbdsva allcostyle boxsh txbdmb30 ss_6 text-center group">
+                        <div class="thbdsvthumb">
+                            <img class="aspect-square object-cover" src={service.image} alt="image">
+                        </div>
+                        <div class="txbdsi boxtexrelative  iconsabsconpd sselect">
+                            <div class="txbdicon iconabs iconalltf iconall iconallactive  ">
+                                <div class="flex items-center justify-center w-full h-full">
+                                <i class="flex! items-center justify-center stroke-black hover:stroke-white! group-hover:stroke-white!" set:html={service.icon}></i>
+                                </div>
+                            </div>
+                            <div class="txbdcon">
+                                <h2 class="txbdsvtitle hlight">{service.title}</h2>
+                                <div class="txbdsvbtn txbdbtnicon">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </div>
+</div>
+    </div>
+</div>

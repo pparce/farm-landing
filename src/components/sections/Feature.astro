@@ -1,4 +1,5 @@
 ---
+import { features } from "../../data/features";
 ---
 <div class="sm_fe_area">
     <div class="container">
@@ -10,76 +11,32 @@
                             <img src="/content/Sm_title_shap.png"
                                  alt="image">
                         </div>
-                        <h2 class="txbdstitle hlight">¡Bienvenido a Nuestra Granja!</h2>
-                        <p>Aquí seleccionará entre varias razas de ovejas adecuadas para su región y condiciones de
-                            mercado.
+                        <h2 class="txbdstitle hlight">Innovación en el Campo</h2>
+                        <p>Brindamos herramientas tecnológicas avanzadas diseñadas para facilitar el trabajo diario y mejorar el rendimiento de tus recursos naturales.
                         </p>
                     </div>
                 </div>
             </div>
-            <!-- 1 single feature -->
-            <div class="col-lg-4 col-md-6">
-                <div class="txbdsva allcostyle boxsh txbdmb30 ss_6 text-center">
-                    <div class="thbdsvthumb">
-                        <img src="/content/Sm_feature1.jpg"
-                             alt="image">
-                    </div>
-                    <div class="txbdsi boxtexrelative  iconsabsconpd sselect">
-                        <div class="txbdcon">
-                            <h2 class="txbdsvtitle hlight">Esquila de Lana</h2>
-                            <p>Aunque las ovejas consumen principalmente pasto, como maíz y heno, para un crecimiento y
-                                producción óptimos.
-                            </p>
-                            <div class="txbdsvbtn txbdbtnicon">
-                                <a class="btnallt btnall"
-                                   href="#">Leer Más</a>
+            {features.map((feature) => (
+                <div class="col-lg-4 col-md-6">
+                    <div class="txbdsva allcostyle boxsh txbdmb30 ss_6 text-center">
+                        <div class="thbdsvthumb">
+                            <img src={feature.image} alt="image">
+                        </div>
+                        <div class="txbdsi boxtexrelative  iconsabsconpd sselect">
+                            <div class="txbdcon">
+                                <h2 class="txbdsvtitle hlight">{feature.title}</h2>
+                                <p>{feature.description}</p>
+                                <div class="txbdsvbtn txbdbtnicon">
+                                    <a class="btnallt btnall" href={feature.link}>Leer Más</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!-- 2 single feature -->
-            <div class="col-lg-4 col-md-6">
-                <div class="txbdsva allcostyle boxsh txbdmb30 ss_6 text-center">
-                    <div class="thbdsvthumb">
-                        <img src="/content/Sm_feature2.jpg"
-                             alt="image">
-                    </div>
-                    <div class="txbdsi boxtexrelative  iconsabsconpd sselect">
-                        <div class="txbdcon">
-                            <h2 class="txbdsvtitle hlight">Conoce Nuestras Ovejas</h2>
-                            <p>Aunque las ovejas consumen principalmente pasto, como maíz y heno, para un crecimiento y
-                                producción óptimos.
-                            </p>
-                            <div class="txbdsvbtn txbdbtnicon">
-                                <a class="btnallt btnall"
-                                   href="#">Leer Más</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- 3 single feature -->
-            <div class="col-lg-4 col-md-6">
-                <div class="txbdsva allcostyle boxsh txbdmb30 ss_6 text-center">
-                    <div class="thbdsvthumb">
-                        <img src="/content/Sm_feature3.jpg"
-                             alt="image">
-                    </div>
-                    <div class="txbdsi boxtexrelative  iconsabsconpd sselect">
-                        <div class="txbdcon">
-                            <h2 class="txbdsvtitle hlight">Alimentación de Ovejas</h2>
-                            <p>Aunque las ovejas consumen principalmente pasto, como maíz y heno, para un crecimiento y
-                                producción óptimos.
-                            </p>
-                            <div class="txbdsvbtn txbdbtnicon">
-                                <a class="btnallt btnall"
-                                   href="#">Leer Más</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            ))}
         </div>
+    </div>
+</div>
     </div>
 </div>

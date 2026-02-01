@@ -1,4 +1,5 @@
 ---
+import { testimonials } from "../../data/testimonials";
 ---
 <div class="sm_test_area">
     <div class="container">
@@ -17,34 +18,22 @@
                     </div>
                 </div>
                 <div class="witr_carousel_main row test_active">
-                    <div class="col-md-12 txbdmb30 ts2_style">
-                        <div class="tsitem pmt alltesicl">
-                            <div class="tsimg tsimgpt">
-                                <img src="/content/Sm_testi1.png" alt="image">
-                            </div>
-                            <div class="tscon">
-                                <h2 class="tstitle">Braitly Dcosta<span class="tesspanf"> Cliente </span></h2>
-                                <div class="tsreview tsdflex d-flex align-items-center justify-content-start">
-                                    <div class="tsrevstar"></div>
+                    {testimonials.map((testimonial) => (
+                        <div class="col-md-12 txbdmb30 ts2_style">
+                            <div class="tsitem pmt alltesicl">
+                                <div class="tsimg tsimgpt">
+                                    <img src={testimonial.image} alt="image">
                                 </div>
-                                <p>“Excelente servicio y productos de alta calidad. Compré lana y carne, y ambos fueron excepcionales. Definitivamente volveré a comprar aquí.”</p>
+                                <div class="tscon">
+                                    <h2 class="tstitle">{testimonial.name}<span class="tesspanf"> {testimonial.role} </span></h2>
+                                    <div class="tsreview tsdflex d-flex align-items-center justify-content-start">
+                                        <div class="tsrevstar"></div>
+                                    </div>
+                                    <p>{testimonial.comment}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-12 txbdmb30 ts2_style">
-                        <div class="tsitem pmt alltesicl">
-                            <div class="tsimg tsimgpt">
-                                <img src="/content/Sm_testi2.png" alt="image">
-                            </div>
-                            <div class="tscon">
-                                <h2 class="tstitle">Rani Cakma<span class="tesspanf"> Cliente </span> </h2>
-                                <div class="tsreview tsdflex d-flex align-items-center justify-content-start">
-                                    <div class="tsrevstar"></div>
-                                </div>
-                                <p>“Visité la granja y quedé impresionado por la limpieza y el cuidado de los animales. Los granjeros son muy amables y conocedores.”</p>
-                            </div>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </div>
         </div>
