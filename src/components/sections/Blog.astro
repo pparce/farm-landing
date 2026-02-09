@@ -1,6 +1,7 @@
 ---
 import { blogs } from "../../data/blog";
 ---
+
 <div class="sm_blog_area">
     <div class="container-fluid">
         <div class="row">
@@ -9,19 +10,24 @@ import { blogs } from "../../data/blog";
                     <div class="tts">
                         <div class="ttin text-left">
                             <div class="ttit flex justify-center items-center">
-                                <img src="/content/Sm_title_shap.png"
-                                     alt="image">
+                                <img
+                                    src="/content/Sm_title_shap.png"
+                                    alt="image"
+                                />
                             </div>
-                            <h2 class="txbdstitle hlight">Últimas Noticias y Blog</h2>
-                            <p>Mantente al día con las últimas novedades en tecnología rural, consejos sobre energía sustentable y avances en automatización para el campo.
+                            <h2 class="txbdstitle hlight">Últimas Noticias</h2>
+                            <p>
+                                Mantente al día con las últimas novedades en
+                                tecnología rural, consejos sobre energía
+                                sustentable y avances en automatización para el
+                                campo.
                             </p>
                         </div>
                     </div>
                     <div class="witr_button_area">
                         <div class="witr_btn_style mr">
                             <div class="witr_btn_sinner">
-                                <a href="#"
-                                   class="witr_btn">
+                                <a href="#" class="witr_btn">
                                     Ver Todas las Noticias
                                 </a>
                             </div>
@@ -31,34 +37,49 @@ import { blogs } from "../../data/blog";
             </div>
             <div class="col-lg-6 col-md-6 witr_all_pd0">
                 <div class="blog_witr">
-                    <div class="witr_carousel_main row">
-                        {blogs.map((blog) => (
-                            <div class=" col-lg-6 col-md-6 col-sm-12 witr_nth_child txbdmb30">
-                                <div class="wblogpart allcostyle">
-                                    <div class="wblogthumb alltcolorstyle">
-                                        <div class="wblogthumbinner">
-                                            <a href={blog.link}>
-                                                <img src={blog.image} alt="image">
-                                            </a>
+                    <div class="witr_carousel_main row container">
+                        {
+                            blogs.slice(0, 2).map((blog) => (
+                                <div class=" col-lg-6 col-md-6 col-sm-12 witr_nth_child txbdmb30">
+                                    <div class="wblogpart allcostyle">
+                                        <div class="wblogthumb alltcolorstyle">
+                                            <div class="wblogthumbinner">
+                                                <a href={blog.link}>
+                                                    <img
+                                                        src={blog.image}
+                                                        alt="image"
+                                                    />
+                                                </a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="wblogcontent allccolorstyle metashowcp">
-                                        <div class="wblogmeta sheepfarm_meta wblogmetaposi">
-                                            <span><i class="ti-timer"></i>{blog.date}</span>
-                                        </div>
-                                        <h2 class="wblogtitle">
-                                            <a href={blog.link}>{blog.title}</a>
-                                        </h2>
-                                        <p>{blog.summary}</p>
-                                        <div class="wbriconoverhidd">
-                                            <div class="wblogbtn">
-                                                <a class="btnallt btnalldefault" href={blog.link}>Leer Más</a>
+                                        <div class="wblogcontent allccolorstyle metashowcp">
+                                            <div class="wblogmeta sheepfarm_meta wblogmetaposi">
+                                                <span>
+                                                    <i class="ti-timer" />
+                                                    {blog.date}
+                                                </span>
+                                            </div>
+                                            <h2 class="wblogtitle">
+                                                <a href={blog.link}>
+                                                    {blog.title}
+                                                </a>
+                                            </h2>
+                                            <p>{blog.summary}</p>
+                                            <div class="wbriconoverhidd">
+                                                <div class="wblogbtn">
+                                                    <a
+                                                        class="btnallt btnalldefault"
+                                                        href={blog.link}
+                                                    >
+                                                        Leer Más
+                                                    </a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))
+                        }
                     </div>
                 </div>
             </div>
