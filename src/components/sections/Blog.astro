@@ -2,11 +2,14 @@
 import { blogs } from "../../data/blog";
 ---
 
-<div class="sm_blog_area">
+<div id="news" class="sm_blog_area container" style="padding: 120px 0 100px;">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-6 col-md-6 witr_all_pd0">
-                <div class="blog_left">
+                <div
+                    class="container py-6 mb-4"
+                    style="background-color: #f3f3f3;"
+                >
                     <div class="tts">
                         <div class="ttin text-left">
                             <div class="ttit flex justify-center items-center">
@@ -37,7 +40,7 @@ import { blogs } from "../../data/blog";
             </div>
             <div class="col-lg-6 col-md-6 witr_all_pd0">
                 <div class="blog_witr">
-                    <div class="witr_carousel_main row container">
+                    <div class="witr_carousel_main row">
                         {
                             blogs.slice(0, 2).map((blog) => (
                                 <div class=" col-lg-6 col-md-6 col-sm-12 witr_nth_child txbdmb30">
