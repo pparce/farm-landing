@@ -11,8 +11,10 @@ import { projects } from "../../data/projects";
                             <div class="item_pos col-lg-12">
                                 <div class="witr_single_pslide">
                                     <div class="witr_pslide_image">
-                                        <img src={project.image} alt="image">
+                                        <img src={project.image} alt="image" class="aspect-square object-cover">
                                     </div>
+                                    <div class="absolute bg-black/40 w-full h-full top-0 left-0"></div>
+
                                     <div class="witr_content_pslide_text">
                                         <div class="witr_content_pslide">
                                             <h2><a href={project.link}>{project.title}</a></h2>

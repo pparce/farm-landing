@@ -1,6 +1,7 @@
 ---
 import { features } from "../../data/features";
 ---
+
 <div class="sm_fe_area">
     <div class="container">
         <div class="row">
@@ -8,35 +9,50 @@ import { features } from "../../data/features";
                 <div class="tts">
                     <div class="ttin text-center">
                         <div class="ttit flex justify-center">
-                            <img src="/content/Sm_title_shap.png"
-                                 alt="image">
+                            <img src="/content/Sm_title_shap.png" alt="image" />
                         </div>
-                        <h2 class="txbdstitle hlight">Innovación en el Campo</h2>
-                        <p>Brindamos herramientas tecnológicas avanzadas diseñadas para facilitar el trabajo diario y mejorar el rendimiento de tus recursos naturales.
+                        <h2 class="txbdstitle hlight">
+                            Innovación en el Campo
+                        </h2>
+                        <p>
+                            Brindamos herramientas tecnológicas avanzadas
+                            diseñadas para facilitar el trabajo diario y mejorar
+                            el rendimiento de tus recursos naturales.
                         </p>
                     </div>
                 </div>
             </div>
-            {features.map((feature) => (
-                <div class="col-lg-4 col-md-6">
-                    <div class="txbdsva allcostyle boxsh txbdmb30 ss_6 text-center">
-                        <div class="thbdsvthumb">
-                            <img src={feature.image} alt="image">
-                        </div>
-                        <div class="txbdsi boxtexrelative  iconsabsconpd sselect">
-                            <div class="txbdcon">
-                                <h2 class="txbdsvtitle hlight">{feature.title}</h2>
-                                <p>{feature.description}</p>
-                                <div class="txbdsvbtn txbdbtnicon">
-                                    <a class="btnallt btnall" href={feature.link}>Leer Más</a>
+            {
+                features.map((feature) => (
+                    <div class="col-lg-4 col-md-6">
+                        <div class="txbdsva allcostyle boxsh txbdmb30 ss_6 text-center ">
+                            <div class="thbdsvthumb">
+                                <img
+                                    src={feature.image}
+                                    alt="image"
+                                    class="aspect-square"
+                                />
+                            </div>
+                            <div class="txbdsi boxtexrelative  iconsabsconpd sselect">
+                                <div class="txbdcon">
+                                    <h2 class="txbdsvtitle hlight">
+                                        {feature.title}
+                                    </h2>
+                                    <p>{feature.description}</p>
+                                    <div class="txbdsvbtn txbdbtnicon">
+                                        <a
+                                            class="btnallt btnall"
+                                            href={feature.link}
+                                        >
+                                            Leer Más
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            ))}
+                ))
+            }
         </div>
-    </div>
-</div>
     </div>
 </div>
