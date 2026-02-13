@@ -22,30 +22,47 @@ import { team } from "../../data/team";
                     </div>
                 </div>
             </div>
-            {
-                team.map((member) => (
-                    <div class="col-lg-4 col-md-6">
-                        <div class="tteam11 alltmcst">
-                            <div class="tteamimg boxtextposire txbdboxallhover">
-                                <img src={member.image} alt="image" />
-                                <div class="tteamcon text-center tteamp11 boxtextposi boxtextposbl alltmcstc">
-                                    <div class="team_title">
-                                        <h2 class="teamtit">{member.name}</h2>
-                                        <span>{member.role}</span>
-                                    </div>
-                                    <div class="tteamsocial ticonp11">
-                                        {member.social.map((social) => (
-                                            <a href={social.link}>
-                                                <i class={social.icon} />
-                                            </a>
-                                        ))}
+            <div
+                class="swiper team_swiper_active"
+            >
+                <div
+                    class="swiper-wrapper w-full"
+                    id="swiper-wrapper-team"
+                    aria-live="off"
+                >
+                    {
+                        team.map((member) => (
+                            <div class="swiper-slide">
+                                <div class="tteam11 alltmcst">
+                                    <div class="tteamimg boxtextposire txbdboxallhover">
+                                        <img src={member.image} alt="image" />
+                                        <div class="tteamcon text-center tteamp11 boxtextposi boxtextposbl alltmcstc">
+                                            <div class="team_title">
+                                                <h2 class="teamtit">
+                                                    {member.name}
+                                                </h2>
+                                                <span>{member.role}</span>
+                                            </div>
+                                            <div class="tteamsocial ticonp11">
+                                                {member.social.map((social) => (
+                                                    <a href={social.link}>
+                                                        <i
+                                                            class={social.icon}
+                                                        />
+                                                    </a>
+                                                ))}
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                ))
-            }
+                        ))
+                    }
+                </div>
+                <!-- <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
+            </div>
         </div>
     </div>
 </div>

@@ -25,5 +25,23 @@ export const team = [
             { icon: "fa fa-instagram", link: "#" },
             { icon: "fab fa-vimeo-v", link: "#" }
         ]
-    }
+    },
+    {
+        name: "Martín Mantovani",
+        role: "Jefe de Instalaciones",
+        image: "/content/Sm_team3.jpg",
+        social: [
+            { icon: "fa fa-instagram", link: "#" },
+            { icon: "fab fa-vimeo-v", link: "#" }
+        ]
+    },
+    {
+        name: "Martín Mantovani",
+        role: "Jefe de Instalaciones",
+        image: "/content/Sm_team3.jpg",
+        social: [
+            { icon: "fa fa-instagram", link: "#" },
+            { icon: "fab fa-vimeo-v", link: "#" }
+        ]
+    },
 ];

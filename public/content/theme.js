@@ -141,6 +141,45 @@
 				  
 			});
 
+			new Swiper('.team_swiper_active', {
+				effect: 'slide',
+				grabCursor: true,
+				speed: 2000,
+				slidesPerGroup: 1,
+				slidesPerView: 3,
+				spaceBetween: 30,
+				freeMode: false,
+				mousewheel: false,
+				keyboard: false,
+				loop: true,
+				autoplay: {
+					delay: 8000,
+					disableOnInteraction: false,
+				},
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				breakpoints: {
+					240: {
+						slidesPerView: 1,
+						spaceBetween: 10,
+					},
+					768: {
+						slidesPerView: 2,
+						spaceBetween: 20,
+					},
+					1024: {
+						slidesPerView: 3,
+						spaceBetween: 30,
+					},
+				},
+			});
+
 			/*==== project active ====*/
 			
 			var witrbslick = $('.proj_active');				
