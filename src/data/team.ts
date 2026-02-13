@@ -1,6 +1,6 @@
 export const team = [
     {
-        name: "Ing. Martín Pérez",
+        name: "Lic. Gabriel Suarez",
         role: "Especialista en Energía Solar",
         image: "/content/Sm_team1.jpg",
         social: [
@@ -9,8 +9,8 @@ export const team = [
         ]
     },
     {
-        name: "Lic. Sofía López",
-        role: "Experta en Seguridad e IA",
+        name: "Agustina Conti",
+        role: "Adminitración",
         image: "/content/Sm_team2.jpg",
         social: [
             { icon: "fa fa-facebook-f", link: "#" },
@@ -18,7 +18,7 @@ export const team = [
         ]
     },
     {
-        name: "Téc. Carlos Ruíz",
+        name: "Martín Mantovani",
         role: "Jefe de Instalaciones",
         image: "/content/Sm_team3.jpg",
         social: [
